@@ -910,8 +910,7 @@ function! s:read_lines(...) dict "{{{
     let self.buffer = ''
     return lines
   else
-    let self.buffer = empty(lines)? '' : lines[-1]
-    let lines = lines[ : -2]
+    let self.buffer = ''
   endif
 
   let self.eof = (self.buffer != '') ? 0 : self.__eof
